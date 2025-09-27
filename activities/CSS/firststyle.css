@@ -1,0 +1,10 @@
+p {
+    color: blue;
+    font-size: 24pt;
+}
+main h1 {
+    color: red;
+}
+header {
+    background-color: rgb(7, 238, 107);
+    text-align: center;
