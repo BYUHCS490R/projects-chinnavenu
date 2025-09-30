@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selector</title>
+    <link rel="stylesheet" href="firststyle.css">
+
+</head>
+<body>
+    <header>
+        <nav>link link link</nav>
+        <h1>css selector</h1>
+    </header>
+    <main>
+        <h1>pratice</h1>
+        <p id="firstP">first paragraph</p>
+        <p class="darker">second pragraph</p>
+        <p class="darker bolder">third paragraph</p>
+    </main>
+    <footer>
+       
+    </footer>
+
+    <HEADER>
+        <H1>ANSWERS TO THOSE QUESTION</H1>
+    </HEADER>
+    <MAin>
+        <p class="darker bolder">List out the different ways to select an item.</p>
+        <p class="darker love">In this code, we can select items by their tag name (like p for all paragraphs), by ID (like #firstP for the first paragraph), by class (like .darker or .bolder), or by where they are (like footer p to style only the paragraph inside the footer).</p>
+        <p class="darker bolder">What is the difference between an ID and a Class?</p>
+        <p class="darker love">An ID (id="firstP") is for one special element only, while a Class (class="darker") can be used on many elements to give them the same style.</p>
+        <p class="darker bolder">What is the difference between a SPAN tag and a DIV tag?</p>
+        <p class="darker love">In the footer, the SPAN (<span class="darker bolder">gowri mogali</span>) is used for a small part inside a sentence, while a DIV is for bigger blocks or sections.</p>
+        <p class="darker bolder">What is the difference between a DIV tag and a HEADER, MAIN, or FOOTER?</p>
+        <p class="darker love">A DIV is just a plain box with no meaning, but HEADER, MAIN, and FOOTER already tell us what part of the page they are (top, middle, or bottom)</p>
+        <p class="darker bolder">What are the different ways to select a color?</p>
+        <p class="darker love">We can give colors by name (like red), HEX code (#ff0000), RGB (rgb(255,0,0)), or HSL (hsl(0,100%,50%)). For example, you could make #firstP red using any of these styles.</p>
+    </MAin>
+    <p>&COPY; <span class="darker bolder">gowri mogali</span> 2025</p>
+    
+</body>
+</html>
