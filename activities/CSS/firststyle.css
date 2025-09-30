@@ -8,3 +8,25 @@ main h1 {
 header {
     background-color: rgb(7, 238, 107);
     text-align: center;
+main h1{
+    color: rgb(8, 33, 103); #3300AA
+    font-size: 25pt;
+}
+header{
+    background-color: blueviolet;
+}
+header h1{
+    color: RGBA(244,99,300,400);
+}
+#firstP{
+    color: blue;
+}
+.darker{
+    color: rgb(60, 46, 1);
+}
+.bolder{
+    font-weight: bolder;
+}
+.love{
+    color: rgb(200.00.400);
+}
