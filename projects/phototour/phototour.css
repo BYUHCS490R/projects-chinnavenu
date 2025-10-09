@@ -1,0 +1,22 @@
+.current{
+    color: royalblue;
+}
+
+.navlinks{
+    
+    color: wheat;
+
+}
+
+body{
+   
+    background: url("bg.jpeg");
+}
+main{
+    background: url("ilovevizag.jpeg") no-repeat top right;
+    height: 150px;
+    
+}
+.places{
+    list-style-image: url("pixcel.png");
+}
