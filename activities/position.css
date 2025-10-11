@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: lightblue;
+    padding: 25px;
+    border-style: dashed;
+    border-color: blue;
+    border-width: 5px;
+}
+nav {
+    border: thin dashed blue;
+    padding-top: 50px;
+    padding-right: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+main p {
+    border: thin dashed blue;
+    padding: 5px 10px 20px 50px;
+    margin: 10px 30px;
+}
+header h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(8, 212, 202);
+}
+main h1{
+    border: thin dashed blue;
+ width: 200px;
+}
