@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 300px;
+    /* this is moved contectnavigation*/
+}
+nav a{
+  display: block; /*inline-block*/
+  padding: 40px;
+  background-color: rgb(202, 141, 9);
+  border-bottom: thin solid rgb(219, 48, 48);
+  text-decoration: none;
+}
+nav a:hover{
+   text-decoration: underline;
+}
+.temple{
+    border: thin solid black;
+    width: 300px;
+}
+.floater {
+    float: left;
+}
+.hammer {
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    margin: 0px;
+    z-index: 10;
+    display: none;
+}
+
+/*.hammer {
+    position: relative;
+    top: 20px
+    bottom: 20px;
+    left: 20px;
+}*/
+
+.temple img {
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
