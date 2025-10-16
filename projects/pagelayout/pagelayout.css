@@ -1,0 +1,102 @@
+/* Centering the page */
+.wrapper {
+    width: 850px;
+    margin: 0 auto;
+    background-color: #111;
+    color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Header section */
+header {
+    background-image: url('download.jpeg');
+    background-size: cover;
+    background-origin: border-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px 12px 0 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Navigation area */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff3333;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect (pseudo-class) */
+nav a:hover {
+    color: #fff;
+    text-shadow: 1px 1px 5px #ff0000;
+}
+
+/* Main section */
+main {
+    padding: 20px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Figure styling */
+.og-image {
+    float: right;
+    width: 280px;
+    margin: 10px;
+    border: 2px solid #ff3333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(255,0,0,0.3);
+}
+
+.og-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.og-image figcaption {
+    text-align: center;
+    font-style: italic;
+    background-color: #1a1a1a;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Footer styling */
+footer {
+    background-image: url('download.jpeg');
+    background-size: cover;
+    background-origin: content-box;
+    background-clip: content-box;
+    color: #eee9e9;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 0 0 12px 12px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
