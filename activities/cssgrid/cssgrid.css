@@ -1,0 +1,38 @@
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .parent{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        gap: 10px;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+    .child{
+        background-color: rgba(247, 245, 245, 0.8);
+      
+    }
+    #wapper{
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        lside main rside
+        "footer footer footer";
+        gap: 10px;
+    }
+    header{
+        grid-area: header;
+       
+    }
+    footer{
+        grid-area: footer;
+       
+    }
+    main{
+        grid-area: main;
+       
+    }
+    nav{
+        grid-area: lside;
+        
+    }
