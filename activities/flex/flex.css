@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, sans-serif;
+}
+nav{
+    background-color: #15b0db;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 1oopx;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 16px;
+    box-shadow: 2px 2px 90px rgba(255, 0, 0, 0.584);
+    width: 300px;
+}
+.row{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
