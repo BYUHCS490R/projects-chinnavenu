@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+header{
+    background-color: #4CAF50;
+    color: rgb(219, 15, 15);
+}
+.sidebar h3 {
+   margin: 0;
+}
+main h2{
+    margin: 0;
+}
+header h1{
+    margin: 0;
+}
+nav a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+}
+nav a:hover{
+    background-color: #eef6ef;
+    color: blue;
+}
+.main-row{
+    display: flex;
+}
+.sidebar{
+    width: 200px;
+
+}
+.card img{
+    width: 100%;
+  
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+    
