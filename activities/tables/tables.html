@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <header>
+        Venu'sweb designing Tables
+        </header>
+    <main>
+        <h1>TABLES</h1>
+
+        <P>When do you use a table?</P>
+        <p>Use a table when you need to display data or information in rows and columns for easy comparison (like schedules, prices, or statistics)</p>
+        <p>When do you not use a table?</p>
+        <P>Do not use a table for page layout or design purposes — use CSS for that instead.</P>
+        <P>When do you need to do extra work for table accessibility?</P>
+        <p>Do extra accessibility work when your table has complex structures (like merged cells or multiple headers) — add <th>, scope, and captions to help screen readers.</p>
+    <table border="1">
+        <caption>MY Class Schedule</caption>
+    <thead>
+        <tr>
+            <th>department</th>
+            <th>employee</th>
+            <th>title</th>
+            <th>location</th>
+            <th>time</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <th colspan="6"> Fall 2025</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cs</td>
+            <td>Chinna</td>
+            <td>web designer</td>
+            <td>hyderabad</td>
+            <td>full time</td>
+        </tr>
+        <tr>
+            <td>IT</td>
+            <td>venu</td>
+            <td>developer</td>
+            <td>banglore</td>
+            <td>part time</td>
+        </tr>
+        <tr>
+            <td>ECE</td>
+            <td>kalyan</td>
+            <td>tester</td>
+            <td>chennai</td>
+            <td>intern</td>
+        </tr>
+        <tr>
+            <td>MECH</td>
+            <td>raju</td>
+            <td>engineer</td>
+            <td>pune</td>
+            <td>full time</td>
+        </tr>
+    </tbody>
+        <tr>
+            <th colspan="5" id="total-credits">Total Credits</th>
+            <td headers="total-credits">12</td>
+        </tr>
+
+        </table>
+        </main>
+        <footer>
+        © 2024 Venu'sweb designing
+        </footer>
+</body>
+</html>
