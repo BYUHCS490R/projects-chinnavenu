@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        Venu'sweb designing Tables
+        Venu's web designing Tables
         </header>
     <main>
         <h1>TABLES</h1>
@@ -19,7 +19,9 @@
         <P>Do not use a table for page layout or design purposes — use CSS for that instead.</P>
         <P>When do you need to do extra work for table accessibility?</P>
         <p>Do extra accessibility work when your table has complex structures (like merged cells or multiple headers) — add <th>, scope, and captions to help screen readers.</p>
-    <table border="1">
+            <P>What is the easiest way to color every other row a different color?</P>
+            <p>The easiest way is to use CSS with the nth-child</p>
+    <table class="Schedule">
         <caption>MY Class Schedule</caption>
     <thead>
         <tr>
@@ -35,28 +37,29 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr class="grayed">
             <td>Cs</td>
+            <td rowspan="2" class="num"
             <td>Chinna</td>
             <td>web designer</td>
             <td>hyderabad</td>
             <td>full time</td>
         </tr>
-        <tr>
+        <tr class="grayed">
             <td>IT</td>
             <td>venu</td>
             <td>developer</td>
             <td>banglore</td>
             <td>part time</td>
         </tr>
-        <tr>
+        <tr class="grayed">
             <td>ECE</td>
             <td>kalyan</td>
             <td>tester</td>
             <td>chennai</td>
             <td>intern</td>
         </tr>
-        <tr>
+        <tr class="grayed">
             <td>MECH</td>
             <td>raju</td>
             <td>engineer</td>
