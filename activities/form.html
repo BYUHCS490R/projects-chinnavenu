@@ -3,64 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>Form</title>
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <header>
-        <h1>Venu web design</h1>
-        
+        <h1>VENU web design</h1>
     </header>
-    <nav>
-            <a href="#">link</a>
-             <a href="#">link</a>
-              <a href="#">link</a>
-               <a href="#">link</a>
-        </nav>
-    <main><h1>Forms</h1>
-    <form action="CssGrid.html" method="post">
-        <div>
-       <label for="fname">Full Name:</label> <input type="text" name="fullname"placeholder="full name" id="fname">
+    <main>
+        <h1>Forms</h1>
+        <form action="formprocess.html" method="get"></form>
+        <div class="form-row">
+            <label for="fname">Full Name:</label>
+            <input type="Text" name="fullname" placeholder="Full Name" id="fname">
         </div>
-        <div>
-       <label for="fname">Email:</label> <input type="email" name="email"placeholder="yourmail@gmail.com" id="email">
+        <div class="form-row">
+            <label for="fname">Email:</label>
+            <input type="email" name="fullname" value="your@gmail.com" id="fname">
         </div>
-         
-         <div>
-        Password :<input type="password" name="password" id="pass">
+        <div class="form-row">
+            <label for="Pass">Passward</label>
+            <input type="passward" name="pass" id="pass">
         </div>
-        <div>
-            <label for="state">state</label>
+        <div class="form-row">
+            <label form="state">State</label>
             <select name="state" id="state">
-                <option value="blank">-----</option>
-                <option value="india">india</option>
-                <option value="palu">palu</option>
-                <option value="HI" selected>Hawaii</option>
+                <option value="blank">----</option>
+                <option value="CA">California</option>
+                <option value="HI">Hawaii</option>
+                <option value="UT">Utah</option>
             </select>
         </div>
-        <div>
-            <label><input type="checkbox"> I agree to the terms and conditions</label>
+        <div class="check-row">
+             <div class="spacer"></div>
+            <label><input type="checkbox">I agree to the terms</label>
         </div>
-        <div>
-            Gender
-           <label> <input type="radio" name="Gender" value="female">female</label>
-             <label> <input type="radio" name="Gender" value="Male">male</label>
+        <div class="check-row">
+             <div class="spacer">Gender:</div>
+            
+            <label><input type="radio" name="male">Male</label>
+            <label><input type="radio" name="female">Female</label>
+        
         </div>
-        <div>
-            <label for="comment">comments</label>
+        <div class="form-row">
+            <label for="comment">Comment:</label>
             <textarea name="comment" id="comment">Hello</textarea>
         </div>
-        <input type="submit" value="sign Up">
+        <div class="form-row">
+            <div class="spacer"></div>
+        <input type="submit" value="Sign up">
+        </div>
+        <p>Action: The action attribute tells the form where to send the data when the user submits </p>
+
+<p>2. Method: The method attribute tells the form how to send the data (what HTTP method to use).</p>
+
+<p>3. POST vs GET: GET sends data in the URL for retrieving information, while POST sends data hidden in the request body for submitting or saving information.</p>
+
     </form>
-<p>what is action?</p>
-<p>action is the page that takes us to the other website</p>
-<p>what is method ?</p>
-<p> Method is the way we keep things</p>
-<p></p>
-<p>Post means change, we can add, update or we can rempve or delete some sorted of data</p>
-<p>with get request we just read data we wont do anything, example like google, youtube</p></main>
+    </main>
     <footer>
-        &copy;Venu Bora@2025.
+        &copy;VENUBORA@2025
     </footer>
+    
 </body>
 </html>
