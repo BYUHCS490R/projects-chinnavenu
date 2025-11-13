@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venu Travel Company</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+      <header>
+    <h1>Explore the World with Us on Wheels</h1>
+    <p>Traveling the world brings new experiences that open our minds and hearts. It allows us to see different cultures, taste unique foods, and meet people with new perspectives. Each journey teaches us something valuable — about others and about ourselves. Exploring new places helps us grow, appreciate life more deeply, and understand how beautiful and diverse our world truly is, "Book your dream trip in just a few clicks!"</p>
+  </header>
+
+  <main>
+    <form>
+      <fieldset>
+        <legend>Traveler Information</legend>
+
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Create Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" />
+        </div>
+
+        <div class="form-group">
+          <label for="date">Travel Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Destination:</label>
+          <select id="destination" name="destination">
+            <option value="">--Select a Destination--</option>
+            <option value="hawaii">Hawaii</option>
+            <option value="italy">Italy</option>
+            <option value="japan">Japan</option>
+            <option value="australia">Australia</option>
+          </select>
+        </div>
+
+        <div class="form-group radio-group">
+          <label>Travel Type:</label>
+          <label><input type="radio" name="type" value="solo" /> Solo</label>
+          <label><input type="radio" name="type" value="family" /> Family</label>
+          <label><input type="radio" name="type" value="group" /> Group</label>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label><input type="checkbox" name="newsletter" /> Subscribe to newsletter</label>
+          <label><input type="checkbox" name="agree" required /> I agree to terms & conditions</label>
+        </div>
+
+        <div class="form-group">
+          <label for="special">Special Requests:</label>
+          <textarea id="special" name="special" rows="4" placeholder="Tell us any preferences..."></textarea>
+        </div>
+
+        <button type="submit">Submit Booking</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Easy Agency | Designed by [Your Name]</p>
+  </footer>
+    
+</body>
+</html>
