@@ -29,16 +29,16 @@ main {
 }
 
 form {
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px 30px;
+  background-color: rgb(230, 224, 224);
+  border-radius: 20px;
+  padding: 150px 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 700px;
+  width: 650px;
   background-image: url("bike.jpg");
   background-size: cover;        
   background-position: center;  
   height: 600px;                 
-  color: white;         
+  color: rgb(75, 5, 214);         
   text-align: center;
   display: flex;
   flex-direction: column;
