@@ -12,58 +12,83 @@
     </header>
     <main>
         <h1>Forms</h1>
-        <form action="formprocess.html" method="get"></form>
-        <div class="form-row">
-            <label for="fname">Full Name:</label>
-            <input type="Text" name="fullname" placeholder="Full Name" id="fname">
-        </div>
-        <div class="form-row">
-            <label for="fname">Email:</label>
-            <input type="email" name="fullname" value="your@gmail.com" id="fname">
-        </div>
-        <div class="form-row">
-            <label for="Pass">Passward</label>
-            <input type="passward" name="pass" id="pass">
-        </div>
-        <div class="form-row">
-            <label form="state">State</label>
-            <select name="state" id="state">
-                <option value="blank">----</option>
-                <option value="CA">California</option>
-                <option value="HI">Hawaii</option>
-                <option value="UT">Utah</option>
-            </select>
-        </div>
-        <div class="check-row">
-             <div class="spacer"></div>
-            <label><input type="checkbox">I agree to the terms</label>
-        </div>
-        <div class="check-row">
-             <div class="spacer">Gender:</div>
+        <form id="form" action="formprocess.html" method="get">
+            <div class="form-row">
+                <label for="fname">Full Name:</label>
+                <input type="Text" name="fullname" placeholder="Full Name" id="fname">
+            </div>
+            <div class="form-row">
+                <label for="fname">Email:</label>
+                <input type="email" name="fullname" value="your@gmail.com" id="fname">
+            </div>
+            <div class="form-row">
+                <label for="Pass">Passward</label>
+                <input type="passward" name="pass" id="pass">
+            </div>
+            <div class="form-row">
+                <label form="state">State</label>
+                <select name="state" id="state">
+                    <option value="blank">----</option>
+                    <option value="CA">California</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="UT">Utah</option>
+                </select>
+            </div>
+            <div class="check-row">
+                <div class="spacer"></div>
+                <label><input type="checkbox">I agree to the terms</label>
+            </div>
+            <div class="check-row">
+                <div class="spacer">Gender:</div>
+                
+                <label><input type="radio" name="male">Male</label>
+                <label><input type="radio" name="female">Female</label>
             
-            <label><input type="radio" name="male">Male</label>
-            <label><input type="radio" name="female">Female</label>
-        
-        </div>
-        <div class="form-row">
-            <label for="comment">Comment:</label>
-            <textarea name="comment" id="comment">Hello</textarea>
-        </div>
-        <div class="form-row">
-            <div class="spacer"></div>
-        <input type="submit" value="Sign up">
-        </div>
+            </div>
+            <div class="form-row">
+                <label for="comment">Comment:</label>
+                <textarea name="comment" id="comment">Hello</textarea>
+            </div>
+            <div class="form-row">
+                <div class="spacer"></div>
+                <input type="submit" value="Sign up">
+            </div>
+        </form>
         <p>Action: The action attribute tells the form where to send the data when the user submits </p>
+        <p>2. Method: The method attribute tells the form how to send the data (what HTTP method to use).</p>
+        <p>3. POST vs GET: GET sends data in the URL for retrieving information, while POST sends data hidden in the request body for submitting or saving information.</p>
 
-<p>2. Method: The method attribute tells the form how to send the data (what HTTP method to use).</p>
-
-<p>3. POST vs GET: GET sends data in the URL for retrieving information, while POST sends data hidden in the request body for submitting or saving information.</p>
-
-    </form>
     </main>
     <footer>
         &copy;VENUBORA@2025
     </footer>
+    <script>
+        document.getElementById('form').addEventListener ('submit',function(event) {
+            event.preventDefault();
+            alert("From Submitted");
+            const fullname = document.getElementById('fname').value;
+            const email = document.getElementById('fname').value;
+            const password = document.getElementById('pass')
+            const age = document.getElementById('state').value;
+
+            if (!fullname || !email) {
+                alert("you need a name and email.")
+                return;
+            }
+
+            if (! password || email) {
+                alert("you need password and email")
+                return;
+            }
+            const formData = {
+                name: fullname,
+                email: email,
+                password: password,
+                State: state,
+            };
+            console.log(formData);
+        });
+    </script>
     
 </body>
 </html>
