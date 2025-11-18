@@ -11,6 +11,7 @@
         <h1>VENU web design</h1>
     </header>
     <main>
+        <div id="message"> </div>
         <h1>Forms</h1>
         <form id="form" action="formprocess.html" method="get">
             <div class="form-row">
@@ -67,38 +68,16 @@
                 jQuery was the most popular front-end JavaScript library for many years.</P>  
              <p>What is the most popular front-end JS library today?
                 React is the most popular front-end JavaScript library today.</p>   
-
+            <p>What is AJAX?</P>
+                <P>AJAX lets websites send/receive data in the background and update parts of the page smoothly.</P>
+            <p>Why do you put your JS Code in a separate file?</p>
+            <P>Separate JS files make your website cleaner, faster, and easier to manage.</P>
+</p>
     </main>
     <footer>
         &copy;VENUBORA@2025
     </footer>
-    <script>
-        document.getElementById('form').addEventListener ('submit',function(event) {
-            event.preventDefault();
-            alert("From Submitted");
-            const fullname = document.getElementById('fname').value;
-            const email = document.getElementById('fname').value;
-            const password = document.getElementById('pass')
-            const age = document.getElementById('state').value;
-
-            if (!fullname || !email) {
-                alert("you need a name and email.")
-                return;
-            }
-
-            if (! password || email) {
-                alert("you need password and email")
-                return;
-            }
-            const formData = {
-                name: fullname,
-                email: email,
-                password: password,
-                State: state,
-            };
-            console.log(formData);
-        });
-    </script>
+    <script src="form.js"></script>
     
 </body>
 </html>
