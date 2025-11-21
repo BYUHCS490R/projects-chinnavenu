@@ -1,9 +1,9 @@
 document.getElementById("bookingForm").addEventListener("submit", processForm);
 
 function processForm(event) {
-    event.preventDefault(); // Prevent normal submit
+    event.preventDefault(); 
 
-    // Collecting values
+    
     const fullname = document.getElementById("fullname").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -15,7 +15,7 @@ function processForm(event) {
 
     const travelType = document.querySelector("input[name='type']:checked");
 
-    // ---- VALIDATION ----
+    
     if (!fullname) {
         alert("Please enter your full name.");
         return;
@@ -31,7 +31,7 @@ function processForm(event) {
         return;
     }
 
-    // Number field rule: Phone number length must be at least 10 digits
+    
     const digits = phone.replace(/\D/g, "");
     if (digits.length < 10) {
         alert("Phone number must have at least 10 digits.");
@@ -43,7 +43,7 @@ function processForm(event) {
         return;
     }
 
-    // Build form object
+    
     const formData = {
         fullname,
         email,
@@ -56,10 +56,10 @@ function processForm(event) {
         newsletter: document.querySelector("input[name='newsletter']").checked
     };
 
-    // Print object to console
+    
     console.log("Form Data:", formData);
 
-    // ---- AJAX CALL (GET for GitHub Pages) ----
+    
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "response.json", true);
 
@@ -67,12 +67,12 @@ function processForm(event) {
         if (xhr.status === 200) {
             const responseData = JSON.parse(xhr.responseText);
 
-            // Display success message
+            
             document.getElementById("response").innerHTML = `
                 <h2>${responseData.message}</h2>
             `;
 
-            // Modify submitted form
+            
             document.getElementById("bookingForm").reset();
             document.getElementById("bookingForm").style.display = "none";
         }
