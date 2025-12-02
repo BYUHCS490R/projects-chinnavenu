@@ -1,0 +1,152 @@
+/* ----------------------------------------------------
+   BASE RESET & GLOBAL STYLES
+---------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ece4e4;
+  color: #222;
+  line-height: 1.6;
+  font-style: oblique;
+ 
+}
+
+body {
+    background-image: url("finalbg.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;            
+    background-position: center;  
+
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header {
+  background: #5eabd1;
+  color: rgb(235, 224, 224);
+  padding: 1rem 0;
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.6rem;
+}
+
+.nav-links a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+  background: #6b74dc;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  display: none;
+  padding: 0.4rem 0.6rem;
+  background: #1b2535;
+  border: none;
+  color: rgb(227, 223, 223);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.hero .intro {
+  width: 50%;
+}
+
+.grid {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.table-wrap {
+  max-width: 900px;
+  margin: auto;
+  background: rgb(246, 246, 246);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+}
+
+thead th {
+  background: #f1f1f1;
+}
