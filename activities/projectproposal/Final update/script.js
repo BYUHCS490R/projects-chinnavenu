@@ -14,45 +14,72 @@ document.addEventListener('DOMContentLoaded', ()=> {
       a.classList.add('active');
     }
   });
-
-  
-  const form = document.getElementById('contactForm');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = form.querySelector('[name="fullname"]').value.trim();
-      const email = form.querySelector('[name="email"]').value.trim();
-      const age = form.querySelector('[name="age"]').value.trim();
-      const passion = form.querySelector('[name="passion"]').value;
-      const message = form.querySelector('[name="message"]').value.trim();
-      
-      const errors = [];
-      if(name.length < 2) errors.push('Please enter your full name.');
-      if(!/^\S+@\S+\.\S+$/.test(email)) errors.push('Please enter a valid email.');
-      if(age && (isNaN(age) || age < 5 || age > 120)) errors.push('Please enter a valid age.');
-      if(!passion) errors.push('Please choose a passion.');
-      if(message.length < 5) errors.push('Please write a short message (≥5 characters).');
-
-      const feedback = document.getElementById('formFeedback');
-      feedback.innerHTML = '';
-      if(errors.length){
-        const ul = document.createElement('ul');
-        ul.style.color = '#b91c1c';
-        errors.forEach(err=>{
-          const li = document.createElement('li'); li.textContent = err; ul.appendChild(li);
-        });
-        feedback.appendChild(ul);
-        return;
-      }
-      
-      feedback.style.color = '#064e3b';
-      feedback.textContent = 'Thank you — your message has been received!';
-      
-      form.reset();
-      
-      setTimeout(()=> {
-        form.style.display = 'none';
-      }, 900);
-    });
-  }
 });
+
+document.getElementById("contactForm").addEventListener("submit", processForm);
+
+function processForm(event) {
+    event.preventDefault(); 
+
+    
+    const fullname = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const age = document.getElementById("age").value.trim();
+    const passion = document.getElementById("passion").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const travelType = document.querySelector("input[name='type']:checked");
+
+    
+    if (!fullname) {
+        alert("Please enter your full name.");
+        return;
+    }
+
+    if (!email) {
+        alert("Email field cannot be empty.");
+        return;
+    }
+
+    if (age < 18) {
+        alert("Your age need to over 17");
+        return;
+    }
+
+    if (length.message < 10) {
+
+    }
+    
+
+
+    
+    const formData = {
+        fullname,
+        email,
+        age,
+        passion,
+        message
+    };
+
+    
+    console.log("Form Data:", formData);
+
+    
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "submit.json", true);
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const responseData = JSON.parse(xhr.responseText);
+
+            
+            document.getElementById("submit").innerHTML = `<h2>${responseData.message}</h2>`;
+
+            
+            document.getElementById("contactForm").reset();
+            document.getElementById("contactForm").style.display = "none";
+        }
+    };
+
+    xhr.send();
+};

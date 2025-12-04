@@ -1,43 +1,82 @@
-document.getElementById('form').addEventListener ('submit',function(event) {
-event.preventDefault();
-alert("From Submitted");
-const fullname = document.getElementById('fname').value;
-const email = document.getElementById('fname').value;
-const password = document.getElementById('pass')
-const age = document.getElementById('state').value;
+document.getElementById("bookingForm").addEventListener("submit", processForm);
 
-if (!fullname || !email) {
-    alert("you need a name and email.")
-    return;
-}
+function processForm(event) {
+    event.preventDefault(); 
 
-if (! password || email) {
-    alert("you need password and email")
-    return;
-}
-const formData = {
-    name: fullname,
-    email: email,
-    password: password,
-    State: state,
-};
-console.log(formData);
+    
+    const fullname = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const date = document.getElementById("date").value.trim();
+    const destination = document.getElementById("destination").value;
+    const special = document.getElementById("special").value.trim();
+    const agree = document.getElementById("agree").checked;
 
+    const travelType = document.querySelector("input[name='type']:checked");
 
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "submit.json", true);
-xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            alert("Form submitted successfully!");
-            const response = JSON.parse(xhr.responseText);
-            console.log(response);
-            //document.getElementById('myForm').reset();
-            document.getElementById('myForm').innerHTML = '';
-            document.getElementById('message').innerText = response.message;
-        } else if (xhr.readyState === 4) {
-                alert("Error submitting form.");
+    
+    if (!fullname) {
+        alert("Please enter your full name.");
+        return;
+    }
+
+    if (!email) {
+        alert("Email field cannot be empty.");
+        return;
+    }
+
+    if (!destination) {
+        alert("Please select a destination.");
+        return;
+    }
+
+    
+    const digits = phone.replace(/\D/g, "");
+    if (digits.length < 10) {
+        alert("Phone number must have at least 10 digits.");
+        return;
+    }
+
+    if (!agree) {
+        alert("You must agree to the terms and conditions.");
+        return;
+    }
+
+    
+    const formData = {
+        fullname,
+        email,
+        password,
+        phone,
+        date,
+        destination,
+        travelType: travelType ? travelType.value : "",
+        special,
+        newsletter: document.querySelector("input[name='newsletter']").checked
+    };
+
+    
+    console.log("Form Data:", formData);
+
+    
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "response.json", true);
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const responseData = JSON.parse(xhr.responseText);
+
+            
+            document.getElementById("response").innerHTML = `
+                <h2>${responseData.message}</h2>
+            `;
+
+            
+            document.getElementById("bookingForm").reset();
+            document.getElementById("bookingForm").style.display = "none";
         }
-     };
-     xhr.send(JSON.stringify(formData));
-});
+    };
+
+    xhr.send();
+}
